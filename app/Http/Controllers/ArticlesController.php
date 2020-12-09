@@ -33,7 +33,7 @@ class ArticlesController extends Controller
 
         event(new ArticleWasCreated($article));
 
-        return redirect()->route('articles.index');
+        return redirect()->route('articles.index')->with('success', 'Article created successfully!');
     }
 
     public function show(Article $article)
